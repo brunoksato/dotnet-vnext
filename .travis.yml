@@ -1,0 +1,6 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'dotnet-vnext' ]; then cd .. && eval "mv $currentfolder dotnet-vnext" && cd dotnet-vnext; fi
